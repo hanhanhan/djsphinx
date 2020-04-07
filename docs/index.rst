@@ -10,7 +10,8 @@ Welcome to dj_sphinx's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   pycharm/configuration
+.. autoclass  
+More documentation needed 
 
 
 

@@ -18,3 +18,8 @@ help:
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
 %: Makefile
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+
+# sphinx-autobuild required: outdir, filenames
+# WARNING: html_static_path entry '_static' does not exist
+livehtml:
+	sphinx-autobuild -b html -p 7000 $(SOURCEDIR) $(BUILDDIR)/html

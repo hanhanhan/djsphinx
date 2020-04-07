@@ -1,0 +1,10 @@
+Sphinx==3.0.0  # https://github.com/sphinx-doc/sphinx
+sphinx-autobuild # Watch a Sphinx directory and rebuild the documentation when a change is detected. Also includes a livereload enabled web server.
+pypandoc # Pypandoc provides a thin wrapper for pandoc, a universal document converter.
+django-sphinxdoc # Embed your Sphinx docs into your Django site
+
+# sphinx-versions
+# versioning
+
+# sphinxcontrib-beamer # This extension to Sphinx adds a Builder for the Beamer LaTeX class.
+# nikola # Static site builder
