@@ -29,7 +29,7 @@ services:
     volumes:
       - ./docs:/docs
     ports:
-      - "127.0.0.1:7000:7000"
+      - "7000:7000"
     command: /start-docs
 
   postgres:
