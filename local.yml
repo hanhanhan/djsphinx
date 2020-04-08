@@ -30,6 +30,7 @@ services:
       - ./docs:/docs
     ports:
       - "7000:7000"
+      - "7010:7010"
     command: /start-docs
 
   postgres:
