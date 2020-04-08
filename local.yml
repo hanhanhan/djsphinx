@@ -19,8 +19,17 @@ services:
       - ./.envs/.local/.postgres
     ports:
       - "8000:8000"
-      - "7000:7000"
     command: /start
+
+  docs:
+    <<: *django
+    image: djsphinx_local_docs
+    volumes:
+      - ./docs:/docs
+    ports:
+      - "7000:7000"
+      - "7001:7001"
+    command: /start-docs
 
   postgres:
     build:

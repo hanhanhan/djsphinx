@@ -10,10 +10,17 @@ Welcome to dj_sphinx's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-.. autoclass  
+.. autoclass
+   :members:
+
+.. automodule
+   :members:
+
+
+are you watching me?
 More documentation needed 
 
-
+more stuff
 
 Indices and tables
 ==================

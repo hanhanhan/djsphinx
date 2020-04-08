@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -o errexit
+set -o pipefail
+set -o nounset
+
+echo start script
+# make livehtml
+(cd /docs && make livehtml)

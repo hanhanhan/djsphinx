@@ -4,9 +4,6 @@ set -o errexit
 set -o pipefail
 set -o nounset
 
-echo "trying to serve docs"
-cd /app/docs && pwd
-cd /app/docs && make livehtml
-
+# if I comment out, weirdly django still runs despite rebuilding
 python manage.py migrate
 python manage.py runserver_plus 0.0.0.0:8000
