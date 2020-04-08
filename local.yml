@@ -6,6 +6,7 @@ volumes:
 
 services:
   django: &django
+    container_name: django
     build:
       context: .
       dockerfile: ./compose/local/django/Dockerfile
@@ -24,11 +25,11 @@ services:
   docs:
     <<: *django
     image: djsphinx_local_docs
+    container_name: docs
     volumes:
       - ./docs:/docs
     ports:
-      - "7000:7000"
-      - "7001:7001"
+      - "127.0.0.1:7000:7000"
     command: /start-docs
 
   postgres:
@@ -36,6 +37,7 @@ services:
       context: .
       dockerfile: ./compose/production/postgres/Dockerfile
     image: djsphinx_production_postgres
+    container_name: database
     volumes:
       - local_postgres_data:/var/lib/postgresql/data
       - local_postgres_data_backups:/backups
@@ -43,9 +45,11 @@ services:
       - ./.envs/.local/.postgres
 
   redis:
+    container_name: queue
     image: redis:5.0
 
   celeryworker:
+    container_name: worker
     <<: *django
     image: djsphinx_local_celeryworker
     depends_on:
@@ -56,6 +60,7 @@ services:
     command: /start-celeryworker
 
   celerybeat:
+    container_name: scheduler
     <<: *django
     image: djsphinx_local_celerybeat
     depends_on:
@@ -66,6 +71,7 @@ services:
     command: /start-celerybeat
 
   flower:
+    container_name: dashboard
     <<: *django
     image: djsphinx_local_flower
     ports:

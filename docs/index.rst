@@ -15,6 +15,15 @@ Welcome to dj_sphinx's documentation!
 
 .. automodule
    :members:
+   
+- rebuild me!
+- sphinx making it work - django cookie cutter
+
+- pandoc conversions + templating + serving
+
+- adding docstrings to interesting classes + methods
+
+- autodoc_mock_imports
 
 
 are you watching me?

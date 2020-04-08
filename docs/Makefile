@@ -22,7 +22,7 @@ help:
 # sphinx-autobuild required: outdir, filenames
 # WARNING: html_static_path entry '_static' does not exist
 livehtml:
-	sphinx-autobuild -b html -p 7001 $(SOURCEDIR) $(BUILDDIR)/html
+	sphinx-autobuild -b html -p 7000 $(SOURCEDIR) $(BUILDDIR)/html
 
 livehtml2:
 	sphinx-autobuild -b html -p 7002 $(SOURCEDIR) $(BUILDDIR)/html
